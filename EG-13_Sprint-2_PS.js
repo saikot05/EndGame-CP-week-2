@@ -4,5 +4,5 @@
  * @return {string}
  */
 function reverseString(str) {
-    // Write your code here
+    return str.split('').reverse().join('');
 }
