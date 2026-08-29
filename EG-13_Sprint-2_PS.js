@@ -34,4 +34,16 @@ function isPalindrome(str) {
     return str === str2
 
 }
-console.log(isPalindrome("racecar"))
+//4. Sum Array Elements
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+function sumArray(nums) {
+    let sum = 0;
+    for (const val of nums) {
+        sum += val;
+    }
+
+    return sum;
+}
