@@ -23,3 +23,15 @@ function findMax(nums) {
     }
     return mx;
 }
+
+//3. Check for Palindrome
+/**
+ * @param {string} str
+ * @return {boolean}
+ */
+function isPalindrome(str) {
+    const str2 = str.split('').reverse().join('');
+    return str === str2
+
+}
+console.log(isPalindrome("racecar"))
