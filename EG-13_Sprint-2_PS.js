@@ -64,3 +64,20 @@ function countVowels(str) {
     }
     return cnt;
 }
+//6. Two Sum
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+function twoSum(nums, target) {
+    const mp = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        const cmp = target - nums[i];
+        if (mp.has(cmp)) {
+            return [mp.get(cmp), i];
+        }
+        mp.set(nums[i], i);
+    }
+    return [];
+}
