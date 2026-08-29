@@ -81,3 +81,11 @@ function twoSum(nums, target) {
     }
     return [];
 }
+//7. Flatten a Nested Array
+/**
+ * @param {Array} arr
+ * @return {Array}
+ */
+function flattenArray(arr) {
+    return arr.flat(Infinity);
+}
