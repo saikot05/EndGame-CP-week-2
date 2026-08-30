@@ -126,3 +126,20 @@ function lengthOfLongestSubstring(s) {
     }
     return mxlen;
 }
+//10. Deep Clone an Object
+/**
+ * @param {Object} obj
+ * @return {Object}
+ */
+function deepClone(obj) {
+    if (obj === null || typeof obj !== 'object') {
+        return obj;
+    }
+    const copy = Array.isArray(obj) ? [] : {};
+    for (const val in obj) {
+        if (obj.hasOwnProperty(val)) {
+            copy[val] = deepClone(obj[val]);
+        }
+    }
+    return copy;
+}
