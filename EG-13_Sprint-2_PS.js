@@ -89,3 +89,19 @@ function twoSum(nums, target) {
 function flattenArray(arr) {
     return arr.flat(Infinity);
 }
+//8. Group Anagrams
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+function groupAnagrams(strs) {
+    const mp = {};
+    for (const val of strs) {
+        const key = val.split('').sort().join('');
+        if (!mp[key]) {
+            mp[key] = [];
+        }
+        mp[key].push(val);
+    }
+    return Object.values(mp);
+}
