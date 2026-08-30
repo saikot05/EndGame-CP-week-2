@@ -105,3 +105,24 @@ function groupAnagrams(strs) {
     }
     return Object.values(mp);
 }
+//9. Longest Substring Without Repeating Characters
+/**
+ * @param {string} s
+ * @return {number}
+ */
+function lengthOfLongestSubstring(s) {
+    let subset = new Set();
+    let l = 0,
+        r = 0;
+    let mxlen = 0;
+    while (r < s.length) {
+        while (subset.has(s[r])) {
+            subset.delete(s[l]);
+            l++;
+        }
+        subset.add(s[r]);
+        mxlen = Math.max(mxlen, r - l + 1);
+        r++;
+    }
+    return mxlen;
+}
